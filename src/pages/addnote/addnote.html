@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Note</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding align="center">
+  <ion-item>
+    <ion-label floating>Title</ion-label>
+    <ion-input type="text" [(ngModel)]="NoteTitle" name="NoteTitle"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Body</ion-label>
+    <ion-input type="textarea" [(ngModel)]="NoteBody" name="NoteBody"></ion-input>
+  </ion-item>
+  <button ion-button (click)="addNote(NoteTitle,NoteBody)" color="light" round>Save Note</button>
+</ion-content>

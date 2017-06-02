@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding align="center">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12><h2>Welcome to AnyNote!</h2></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <p>Have you ever needed to write something down, but didn't have a pen or paper.</p>
+        <p>Well with AnyNote, you can create notes anytime, or anywhere. You can even share with your friends!</p>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="authCtrl.loggedIn != true;">
+    <ion-row>
+      <ion-col col-12>
+        <p>Sign up Today!</p>
+        <button ion-button color="light" round (click)="registerPage()">Register</button>
+      </ion-col>
+      <ion-col col-12>
+        <p>Already a member?</p>
+        <button ion-button color="light" round (click)="loginPage()">Login</button>
+      </ion-col>
+    </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>
